@@ -1,0 +1,18 @@
+/*#sample-slideshow .photo img{
+  display: none;
+  position: absolute;
+}*/
+.animateField {
+  position:relative;
+  width: 50%;
+
+
+}
+.animateField img {
+  position: absolute;
+  transform: translateY(-50%)
+  top: 70px;
+  width:750px;
+  height: 500px;
+
+}

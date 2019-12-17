@@ -1,0 +1,110 @@
+@charset "utf-8";
+body{
+   background-image:url("../images/back2.png") ;
+   width: 100%;
+  text-align: center;
+
+ }
+ /*h1{
+   position: relative;	/* 要素の位置を固定する */
+/*top: 0; /* 基準の位置を画面の一番上に指定する */
+/*left: 91%;
+ }*/
+ ul#menu{
+margin-left: auto;
+margin-right: auto;
+ 	width:800px;
+ 	height:50px;	/*メインメニュー部分の幅と高さ*/
+ top:0;
+
+
+ }
+
+ #menu li{
+ 	list-style-type:none;		/*リストマーカー無しにする*/
+ 	display:inline;			/*リスト項目をインライン表示にする*/
+ 	float:left;			/*リスト項目を横に並べる*/
+ }
+ #menu li a{
+ 	background-color:#191970;/*メニューボタン背景色をここに設定*/
+ 	color:#ffffff;/*メニューボタン文字色をここに設定*/
+ 	display:block;	/*リンク部分をブロック表示にする*/
+ 	width:250px;
+ 	height:35px;	/*幅と高さ*/
+   padding:15px 0px 0px 0px;	/*パディング 上15px 残りは全て0*/
+ 	text-align:center;	/*テキストをセンター揃えにする*/
+ 	text-decoration:none;	/*リンク部分を下線無しにする*/
+ }
+
+ #menu li a:hover{
+ 	background-color:#4169e1;/*マウス乗った時の背景色をここに設定*/
+ }
+
+ h1{
+   text-align:center;
+   margin:150px 0px 0px 0px;
+ }
+ #page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+.ht{
+
+}
+.ht img{
+  float: left;
+  width: 600px;
+  height:300px;
+  margin-top: 100px;
+  margin-left: 100px;
+  padding: 0px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
+}
+.iq{
+  float: left;
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px 0px 0px 30px;
+
+}
+.th{
+
+}
+.th img{
+  clear: left;
+  float: left;
+  width: 600px;
+  height:300px;
+  margin-top: 100px;
+  margin-left: 100px;
+  padding-top: 0px;
+  padding: 0px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
+}
+.ip{
+  float: left;
+  display: inline-block;
+  margin-top: 100px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px 0px 0px 30px;
+margin-bottom: 300px;
+}
