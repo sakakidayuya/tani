@@ -1,0 +1,104 @@
+
+<html lang ="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script language="JavaScript">
+<!--//Copyright (C) WEST MiRa http://www.west-mira.jp
+
+	tukamaru_moji=new Array();
+
+	//マスコット画像の横幅を指定する
+	image_width=80;
+	//マスコット画像の高さを指定する
+	image_height=80;
+
+	//クリックされた時に表示したいメッセージを指定する
+	tukamaru_moji[0]='ソーナンス！';
+	tukamaru_moji[1]='ソーナンス！２';
+	tukamaru_moji[2]='さようなら';
+	tukamaru_moji[3]='こんにちは';
+
+	my_times=0; x_iti=0; y_iti=0; hajime=0; dotti=0; dotti2=0; hayasa=10;
+	function randoms()
+		{
+		dotti=Math.floor(Math.random()*3);
+		dotti2=Math.floor(Math.random()*2);
+		hayasa=Math.floor(Math.random()*35)+10;
+		x_iti=Math.floor(Math.random()*x_max);
+		y_iti=Math.floor(Math.random()*y_max);
+		return;
+		}
+
+	function value_change(iti)
+		{if(dotti2 == 0)iti-=hayasa;   else iti+=hayasa;   return iti;}
+
+	function hyouji()
+		{
+		if((document.layers) || ((document.getElementById) && (!document.all)))
+			{
+			x_max=outerWidth-image_width;
+			y_max=outerHeight-image_height;}
+		else
+			{
+			x_max=document.body.clientWidth-image_width;
+			y_max=document.body.clientHeight-image_height;
+			}
+
+		if(hajime != 0 && dotti == 0)
+			{if(x_max > x_iti && x_iti > -image_width)x_iti=value_change(x_iti);
+			else randoms(); }
+
+		else if(hajime != 0 && dotti == 1)
+			{if(y_max > y_iti && y_iti > -image_height)y_iti=value_change(y_iti);
+			else randoms(); }
+
+		else if(hajime != 0 && dotti == 2)
+			{if(x_max > x_iti && x_iti > -image_width)x_iti=value_change(x_iti);
+			else randoms();
+			if(y_max > y_iti && y_iti > -image_height)y_iti=value_change(y_iti);
+			else randoms(); }
+
+		else
+			{hajime=1;
+			dotti2=Math.floor(Math.random()*2);
+			x_iti=Math.floor(Math.random()*x_max);
+			y_iti=Math.floor(Math.random()*y_max);}
+
+		if(document.layers){
+			document.layers["lay0"].moveTo(x_iti,y_iti);
+			document.layers["lay0"].visibility='show';}
+
+		else if((document.getElementById) && (!document.all)){
+			document.getElementById("lay0").style.left=x_iti;
+			document.getElementById("lay0").style.top=y_iti;
+			document.getElementById("lay0").style.visibility='visible';}
+
+		else if(document.all){
+			document.all("lay0").style.pixelLeft=x_iti;
+			document.all("lay0").style.pixelTop=y_iti;
+			document.all("lay0").style.visibility='visible';}
+
+		clearTimeout(my_times);   my_times=setTimeout('hyouji();',100);
+		}
+
+	function tukamaru()
+		{
+		doko=Math.floor(Math.random()*4);
+		alert(tukamaru_moji[doko]);
+		}
+
+//-->
+</script>
+
+</head>
+
+<body onLoad="hyouji();">
+
+<!-- 下記のimgタグにマスコット画像で使いたい画像のURLを指定する -->
+<span id="lay0" style="position:absolute;visibility:hidden;">
+<a href="JavaScript:tukamaru();"><img src="./images/1.jpg" border="0"></a>
+</span>
+うぼぁ
+
+</body></html>
