@@ -131,3 +131,10 @@ margin-bottom: 300px;
   padding: 0px 0px 0px 30px;
 margin-bottom: 0px;
 }
+.twitter-timeline{
+  position: absolute;
+  margin-right: 50px;
+  margin-top: 400px;
+
+  float: right;
+}
