@@ -9,6 +9,7 @@ body{
 /*top: 0; /* 基準の位置を画面の一番上に指定する */
 /*left: 91%;
  }*/
+ /*----------------------------------------------------------------------------------------------*/
  ul#menu{
 margin-left: auto;
 margin-right: auto;
@@ -38,11 +39,7 @@ margin-right: auto;
  #menu li a:hover{
  	background-color:#4169e1;/*マウス乗った時の背景色をここに設定*/
  }
-
- h1{
-   text-align:center;
-   margin:150px 0px 0px 0px;
- }
+ /*----------------------------------------------------------------------------------------------*/
  #page-top {
     position: fixed;
     bottom: 20px;
@@ -62,6 +59,11 @@ margin-right: auto;
 #page-top a:hover {
     text-decoration: none;
     background: #999;
+}
+/*----------------------------------------------------------------------------------------------*/
+h1{
+  text-align:center;
+  margin:150px 0px 0px 0px;
 }
 .ht{
 
@@ -130,6 +132,7 @@ margin-bottom: 300px;
   padding: 0px 0px 0px 30px;
 margin-bottom: 0px;
 }
+/*----------------------------------------------------------------------------------------------*/
 #kakusi{
   color: #FFFFFFFF;
 }
